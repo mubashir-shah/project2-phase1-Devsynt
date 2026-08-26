@@ -1,0 +1,30 @@
+RETAIL DATA ANALYSIS INSIGHTS
+==================================================
+
+Total Sales: $3,132,571.00
+
+Top Products:
+  - Laptop: 563 units
+  - Desk Chair: 524 units
+  - Headphones: 519 units
+  - USB Cable: 510 units
+  - Mouse: 495 units
+
+Sales by Region:
+  - North: $896,526.00
+  - West: $847,840.00
+  - East: $703,518.00
+  - South: $684,687.00
+
+Sales by Category:
+  - Electronics: $1,072,830.00
+  - Furniture: $1,036,100.00
+  - Accessories: $1,023,641.00
+
+Summary Statistics:
+  - total_records: 500
+  - total_quantity: 3853
+  - avg_transaction_value: 6265.142
+  - max_sale: 20356.0
+  - min_sale: 61.0
+  - date_range: 2023-01-02 00:00:00 to 2023-12-29 00:00:00

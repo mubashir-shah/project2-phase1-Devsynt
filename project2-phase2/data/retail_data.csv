@@ -1,0 +1,501 @@
+Date,Product,Category,Quantity,UnitPrice,Region,Sales
+2023-01-02,Laptop,Accessories,4,1227,South,4908
+2023-01-03,USB Cable,Furniture,3,1431,South,4293
+2023-01-03,Mouse,Accessories,8,354,North,2832
+2023-01-04,USB Cable,Electronics,4,503,North,2012
+2023-01-04,Desk Chair,Electronics,7,1321,East,9247
+2023-01-05,USB Cable,Electronics,6,1080,South,6480
+2023-01-05,Desk Chair,Electronics,13,1362,West,17706
+2023-01-06,Headphones,Furniture,2,1057,West,2114
+2023-01-06,Headphones,Accessories,5,1393,East,6965
+2023-01-07,Keyboard,Accessories,2,107,South,214
+2023-01-07,Keyboard,Accessories,4,68,North,272
+2023-01-08,Desk Chair,Electronics,9,1310,North,11790
+2023-01-09,Webcam,Furniture,3,373,South,1119
+2023-01-09,Desk Chair,Furniture,9,819,West,7371
+2023-01-10,Monitor,Furniture,6,474,West,2844
+2023-01-10,Laptop,Electronics,12,532,West,6384
+2023-01-10,USB Cable,Accessories,9,325,North,2925
+2023-01-12,Laptop,Furniture,12,427,South,5124
+2023-01-12,Keyboard,Accessories,9,291,West,2619
+2023-01-13,Headphones,Electronics,14,1302,West,18228
+2023-01-14,USB Cable,Electronics,9,863,South,7767
+2023-01-14,USB Cable,Electronics,13,1293,West,16809
+2023-01-14,Desk Chair,Electronics,2,731,East,1462
+2023-01-15,USB Cable,Accessories,8,686,North,5488
+2023-01-15,Keyboard,Furniture,14,1454,North,20356
+2023-01-16,Laptop,Furniture,1,144,South,144
+2023-01-17,Headphones,Furniture,14,966,North,13524
+2023-01-17,Monitor,Electronics,2,1447,West,2894
+2023-01-17,USB Cable,Accessories,1,1330,East,1330
+2023-01-17,Headphones,Accessories,11,670,North,7370
+2023-01-17,Desk Chair,Furniture,2,367,North,734
+2023-01-19,Headphones,Electronics,5,713,South,3565
+2023-01-19,Keyboard,Furniture,13,1220,West,15860
+2023-01-21,USB Cable,Electronics,3,122,East,366
+2023-01-22,Webcam,Accessories,10,163,South,1630
+2023-01-22,Monitor,Furniture,5,235,East,1175
+2023-01-24,Laptop,Furniture,4,553,South,2212
+2023-01-24,Monitor,Furniture,5,331,South,1655
+2023-01-26,Mouse,Electronics,8,1426,North,11408
+2023-01-26,Keyboard,Electronics,2,1203,North,2406
+2023-01-26,Mouse,Electronics,10,1063,West,10630
+2023-01-27,Headphones,Furniture,14,871,West,12194
+2023-01-27,USB Cable,Furniture,7,360,North,2520
+2023-01-28,Laptop,Electronics,8,1006,East,8048
+2023-01-28,Desk Chair,Accessories,2,1180,East,2360
+2023-01-29,Webcam,Furniture,2,1038,West,2076
+2023-01-29,Keyboard,Furniture,11,1257,West,13827
+2023-01-29,Mouse,Electronics,8,736,East,5888
+2023-01-30,Keyboard,Furniture,9,455,East,4095
+2023-01-31,Monitor,Furniture,6,1480,West,8880
+2023-01-31,Monitor,Accessories,13,91,East,1183
+2023-01-31,Mouse,Accessories,5,1076,West,5380
+2023-01-31,Laptop,Accessories,13,192,East,2496
+2023-02-01,Mouse,Accessories,13,99,North,1287
+2023-02-02,Desk Chair,Electronics,10,1232,East,12320
+2023-02-02,Webcam,Furniture,6,911,North,5466
+2023-02-03,Keyboard,Furniture,3,354,West,1062
+2023-02-03,Mouse,Accessories,2,370,West,740
+2023-02-03,Keyboard,Accessories,4,558,South,2232
+2023-02-04,Laptop,Furniture,2,413,West,826
+2023-02-04,Laptop,Furniture,6,1350,South,8100
+2023-02-04,Webcam,Accessories,12,1332,South,15984
+2023-02-05,Keyboard,Furniture,4,399,East,1596
+2023-02-05,USB Cable,Furniture,1,1353,North,1353
+2023-02-05,Headphones,Accessories,13,1218,West,15834
+2023-02-06,Headphones,Accessories,8,430,West,3440
+2023-02-06,Monitor,Accessories,2,1253,West,2506
+2023-02-07,Desk Chair,Furniture,4,678,North,2712
+2023-02-07,Keyboard,Electronics,13,564,North,7332
+2023-02-09,Keyboard,Accessories,8,742,North,5936
+2023-02-10,Headphones,Electronics,13,1414,North,18382
+2023-02-10,Laptop,Furniture,12,183,West,2196
+2023-02-11,Webcam,Accessories,11,774,North,8514
+2023-02-12,Headphones,Furniture,12,810,North,9720
+2023-02-12,Desk Chair,Furniture,5,1478,West,7390
+2023-02-12,Laptop,Accessories,9,1018,South,9162
+2023-02-12,Webcam,Accessories,5,312,West,1560
+2023-02-13,USB Cable,Electronics,8,1266,North,10128
+2023-02-13,Keyboard,Electronics,6,448,East,2688
+2023-02-13,Monitor,Furniture,12,1132,North,13584
+2023-02-13,USB Cable,Electronics,1,403,East,403
+2023-02-14,Desk Chair,Electronics,3,115,West,345
+2023-02-16,Monitor,Electronics,8,769,West,6152
+2023-02-20,Keyboard,Furniture,13,871,East,11323
+2023-02-20,Laptop,Accessories,6,575,West,3450
+2023-02-21,Desk Chair,Electronics,10,1357,South,13570
+2023-02-21,Headphones,Furniture,11,1181,North,12991
+2023-02-22,Laptop,Accessories,10,1018,South,10180
+2023-02-22,Monitor,Accessories,4,1142,West,4568
+2023-02-26,Desk Chair,Accessories,1,1444,West,1444
+2023-02-26,Laptop,Accessories,9,804,South,7236
+2023-02-27,Mouse,Electronics,14,711,West,9954
+2023-02-28,Monitor,Accessories,13,134,East,1742
+2023-02-28,Laptop,Accessories,10,476,East,4760
+2023-02-28,Desk Chair,Electronics,11,714,West,7854
+2023-03-01,USB Cable,Accessories,9,697,West,6273
+2023-03-03,Desk Chair,Electronics,13,51,West,663
+2023-03-04,Webcam,Furniture,7,63,South,441
+2023-03-05,Headphones,Furniture,2,1291,East,2582
+2023-03-05,Webcam,Furniture,9,710,South,6390
+2023-03-05,Headphones,Furniture,13,900,North,11700
+2023-03-06,Monitor,Electronics,6,1066,West,6396
+2023-03-06,Keyboard,Accessories,10,190,South,1900
+2023-03-08,USB Cable,Furniture,10,843,South,8430
+2023-03-08,Desk Chair,Electronics,11,916,North,10076
+2023-03-09,Laptop,Accessories,1,336,West,336
+2023-03-10,Mouse,Furniture,9,177,East,1593
+2023-03-10,USB Cable,Accessories,5,1397,East,6985
+2023-03-10,Desk Chair,Furniture,12,357,West,4284
+2023-03-13,Headphones,Accessories,7,1434,West,10038
+2023-03-13,Laptop,Furniture,1,116,East,116
+2023-03-13,Mouse,Accessories,11,842,North,9262
+2023-03-14,Mouse,Furniture,11,886,North,9746
+2023-03-14,Mouse,Electronics,1,214,South,214
+2023-03-19,Keyboard,Accessories,12,960,South,11520
+2023-03-20,Laptop,Furniture,9,908,South,8172
+2023-03-23,Mouse,Furniture,2,1248,North,2496
+2023-03-23,Monitor,Accessories,3,302,West,906
+2023-03-23,USB Cable,Accessories,1,1366,South,1366
+2023-03-24,Headphones,Furniture,14,1050,North,14700
+2023-03-25,USB Cable,Accessories,14,178,North,2492
+2023-03-25,USB Cable,Electronics,8,1296,North,10368
+2023-03-28,Monitor,Accessories,11,1234,South,13574
+2023-03-28,Laptop,Accessories,6,1373,West,8238
+2023-03-29,Desk Chair,Electronics,10,1377,North,13770
+2023-03-30,Webcam,Accessories,13,1490,North,19370
+2023-03-30,Laptop,Furniture,12,1059,South,12708
+2023-03-31,USB Cable,Furniture,12,1054,South,12648
+2023-04-01,Monitor,Electronics,8,1379,West,11032
+2023-04-01,Desk Chair,Furniture,12,1327,East,15924
+2023-04-02,Laptop,Electronics,12,793,West,9516
+2023-04-02,Keyboard,Furniture,14,854,North,11956
+2023-04-05,USB Cable,Accessories,11,1497,North,16467
+2023-04-05,Webcam,Accessories,1,760,East,760
+2023-04-07,Laptop,Accessories,13,476,North,6188
+2023-04-09,Monitor,Furniture,12,291,West,3492
+2023-04-10,Desk Chair,Accessories,4,1021,North,4084
+2023-04-12,Laptop,Accessories,9,1360,West,12240
+2023-04-12,Headphones,Electronics,3,1085,West,3255
+2023-04-13,Laptop,Furniture,2,1376,North,2752
+2023-04-13,USB Cable,Furniture,12,699,North,8388
+2023-04-13,Laptop,Furniture,6,100,North,600
+2023-04-13,USB Cable,Furniture,13,625,East,8125
+2023-04-13,Mouse,Accessories,14,1282,East,17948
+2023-04-13,Laptop,Furniture,4,1043,South,4172
+2023-04-14,Monitor,Electronics,11,394,North,4334
+2023-04-15,Mouse,Furniture,10,315,East,3150
+2023-04-15,Monitor,Furniture,9,59,South,531
+2023-04-16,Laptop,Electronics,5,544,West,2720
+2023-04-17,Desk Chair,Electronics,11,1371,North,15081
+2023-04-17,Mouse,Electronics,7,383,East,2681
+2023-04-18,Laptop,Furniture,4,849,West,3396
+2023-04-18,Mouse,Electronics,13,494,East,6422
+2023-04-18,Headphones,Furniture,9,1217,North,10953
+2023-04-20,Headphones,Accessories,11,1036,North,11396
+2023-04-22,Webcam,Electronics,4,887,West,3548
+2023-04-22,Mouse,Electronics,5,149,South,745
+2023-04-24,USB Cable,Accessories,2,846,East,1692
+2023-04-24,Keyboard,Accessories,9,350,West,3150
+2023-04-25,Monitor,Accessories,11,1324,North,14564
+2023-04-26,Mouse,Furniture,13,719,East,9347
+2023-04-27,Monitor,Furniture,12,335,East,4020
+2023-04-27,Keyboard,Accessories,8,1081,East,8648
+2023-04-27,Mouse,Accessories,9,676,West,6084
+2023-04-27,Desk Chair,Accessories,1,776,South,776
+2023-04-28,Keyboard,Electronics,13,1291,North,16783
+2023-04-28,Webcam,Furniture,3,964,East,2892
+2023-04-28,Desk Chair,Furniture,11,1020,North,11220
+2023-04-29,USB Cable,Furniture,1,832,West,832
+2023-04-29,Monitor,Furniture,9,182,South,1638
+2023-04-29,Laptop,Accessories,11,1074,South,11814
+2023-04-30,Headphones,Furniture,14,1234,West,17276
+2023-05-01,Desk Chair,Electronics,14,1093,North,15302
+2023-05-04,Headphones,Electronics,11,360,North,3960
+2023-05-04,Headphones,Electronics,10,936,West,9360
+2023-05-04,Mouse,Accessories,7,1340,West,9380
+2023-05-05,Desk Chair,Electronics,10,104,West,1040
+2023-05-05,USB Cable,Accessories,14,504,North,7056
+2023-05-08,Desk Chair,Furniture,10,916,East,9160
+2023-05-09,Desk Chair,Accessories,10,592,East,5920
+2023-05-09,USB Cable,Electronics,9,819,East,7371
+2023-05-10,USB Cable,Electronics,6,970,East,5820
+2023-05-11,USB Cable,Furniture,13,383,North,4979
+2023-05-11,Desk Chair,Electronics,1,362,East,362
+2023-05-12,Desk Chair,Furniture,12,1314,West,15768
+2023-05-12,Laptop,Furniture,11,201,North,2211
+2023-05-13,Monitor,Furniture,8,163,North,1304
+2023-05-14,Mouse,Furniture,8,51,North,408
+2023-05-15,Webcam,Furniture,10,737,North,7370
+2023-05-15,Headphones,Accessories,14,940,North,13160
+2023-05-16,Keyboard,Furniture,3,1174,South,3522
+2023-05-16,Headphones,Accessories,14,1013,North,14182
+2023-05-16,Webcam,Accessories,2,719,South,1438
+2023-05-17,Webcam,Accessories,13,1055,South,13715
+2023-05-17,Monitor,Electronics,10,1389,North,13890
+2023-05-17,USB Cable,Furniture,12,1279,South,15348
+2023-05-17,USB Cable,Accessories,4,384,West,1536
+2023-05-18,Laptop,Electronics,12,1191,East,14292
+2023-05-18,USB Cable,Accessories,8,610,South,4880
+2023-05-21,USB Cable,Electronics,6,198,North,1188
+2023-05-21,USB Cable,Furniture,7,155,North,1085
+2023-05-22,USB Cable,Electronics,1,877,West,877
+2023-05-22,Webcam,Furniture,7,1404,North,9828
+2023-05-22,Laptop,Furniture,3,1349,West,4047
+2023-05-23,Mouse,Electronics,9,679,East,6111
+2023-05-24,Webcam,Furniture,11,456,South,5016
+2023-05-26,Headphones,Electronics,2,603,South,1206
+2023-05-30,Desk Chair,Furniture,12,1258,East,15096
+2023-05-30,Mouse,Electronics,14,680,North,9520
+2023-05-31,USB Cable,Furniture,10,495,South,4950
+2023-06-02,Mouse,Accessories,8,135,South,1080
+2023-06-03,USB Cable,Accessories,9,490,South,4410
+2023-06-04,Webcam,Electronics,7,1231,West,8617
+2023-06-05,Webcam,Accessories,13,1064,West,13832
+2023-06-06,USB Cable,Accessories,4,543,East,2172
+2023-06-06,Headphones,Electronics,1,706,South,706
+2023-06-06,USB Cable,Furniture,10,539,South,5390
+2023-06-07,Webcam,Electronics,5,527,South,2635
+2023-06-08,Laptop,Furniture,14,1175,East,16450
+2023-06-10,Keyboard,Electronics,5,630,West,3150
+2023-06-10,Keyboard,Electronics,5,77,West,385
+2023-06-11,Headphones,Accessories,10,410,South,4100
+2023-06-13,Monitor,Electronics,14,505,North,7070
+2023-06-15,USB Cable,Electronics,5,1098,South,5490
+2023-06-16,Laptop,Accessories,2,1152,North,2304
+2023-06-16,Webcam,Furniture,14,424,East,5936
+2023-06-17,Laptop,Electronics,9,566,West,5094
+2023-06-19,Mouse,Accessories,3,1099,North,3297
+2023-06-19,USB Cable,Electronics,4,141,East,564
+2023-06-21,Monitor,Furniture,2,997,South,1994
+2023-06-22,Webcam,Accessories,5,351,West,1755
+2023-06-22,Mouse,Electronics,11,534,North,5874
+2023-06-23,USB Cable,Furniture,13,1048,North,13624
+2023-06-28,Mouse,Electronics,11,410,East,4510
+2023-06-29,Laptop,Electronics,13,448,South,5824
+2023-06-29,Desk Chair,Electronics,2,1140,South,2280
+2023-06-29,Headphones,Accessories,8,749,North,5992
+2023-06-30,Mouse,Accessories,13,1236,East,16068
+2023-06-30,Headphones,Electronics,6,530,North,3180
+2023-06-30,Mouse,Electronics,2,1279,North,2558
+2023-07-01,Webcam,Electronics,1,637,West,637
+2023-07-03,Webcam,Furniture,3,1245,South,3735
+2023-07-03,Monitor,Accessories,1,793,West,793
+2023-07-03,Webcam,Electronics,12,1190,South,14280
+2023-07-03,Mouse,Furniture,11,1074,South,11814
+2023-07-04,Laptop,Electronics,11,1352,West,14872
+2023-07-05,Laptop,Electronics,11,175,East,1925
+2023-07-06,Headphones,Electronics,6,1458,South,8748
+2023-07-06,Keyboard,Accessories,2,446,East,892
+2023-07-06,Mouse,Electronics,8,566,North,4528
+2023-07-07,Keyboard,Electronics,14,1054,East,14756
+2023-07-08,Webcam,Accessories,7,195,South,1365
+2023-07-09,Headphones,Accessories,3,1112,West,3336
+2023-07-09,Laptop,Accessories,10,968,West,9680
+2023-07-09,Headphones,Accessories,1,476,West,476
+2023-07-10,Mouse,Accessories,12,1085,North,13020
+2023-07-10,Webcam,Electronics,13,948,West,12324
+2023-07-10,Mouse,Electronics,12,1122,North,13464
+2023-07-11,Keyboard,Electronics,13,801,East,10413
+2023-07-12,Webcam,Accessories,12,1183,North,14196
+2023-07-13,Monitor,Furniture,8,580,North,4640
+2023-07-13,Keyboard,Furniture,8,654,West,5232
+2023-07-15,USB Cable,Electronics,7,638,West,4466
+2023-07-16,USB Cable,Furniture,13,795,West,10335
+2023-07-17,Headphones,Furniture,11,1133,South,12463
+2023-07-18,USB Cable,Furniture,1,570,East,570
+2023-07-18,Keyboard,Furniture,11,935,West,10285
+2023-07-19,USB Cable,Electronics,14,477,North,6678
+2023-07-19,Desk Chair,Furniture,9,1376,North,12384
+2023-07-20,USB Cable,Furniture,6,798,North,4788
+2023-07-20,Webcam,Furniture,7,468,North,3276
+2023-07-20,Laptop,Accessories,1,61,West,61
+2023-07-22,Webcam,Electronics,5,287,West,1435
+2023-07-22,Laptop,Accessories,9,1150,West,10350
+2023-07-22,Laptop,Furniture,12,877,North,10524
+2023-07-23,Desk Chair,Accessories,5,643,West,3215
+2023-07-23,Mouse,Accessories,11,638,West,7018
+2023-07-24,Headphones,Accessories,3,1058,South,3174
+2023-07-27,Mouse,Electronics,2,547,West,1094
+2023-07-28,Webcam,Electronics,14,1418,South,19852
+2023-07-29,Webcam,Accessories,2,455,West,910
+2023-07-30,Headphones,Furniture,9,610,West,5490
+2023-07-30,Desk Chair,Accessories,7,1197,West,8379
+2023-07-31,Headphones,Accessories,2,775,North,1550
+2023-08-01,Keyboard,Accessories,11,179,North,1969
+2023-08-02,Headphones,Accessories,12,531,North,6372
+2023-08-02,Keyboard,Electronics,3,1048,South,3144
+2023-08-02,Webcam,Electronics,5,895,North,4475
+2023-08-04,Keyboard,Electronics,7,1175,West,8225
+2023-08-04,Laptop,Electronics,8,1033,West,8264
+2023-08-05,Desk Chair,Accessories,13,602,North,7826
+2023-08-07,Laptop,Furniture,5,641,South,3205
+2023-08-07,Laptop,Accessories,5,344,South,1720
+2023-08-08,Monitor,Accessories,9,686,East,6174
+2023-08-10,Headphones,Electronics,9,430,West,3870
+2023-08-10,Desk Chair,Accessories,4,865,South,3460
+2023-08-11,Headphones,Electronics,13,850,South,11050
+2023-08-12,Desk Chair,Electronics,6,558,East,3348
+2023-08-12,Headphones,Accessories,12,989,East,11868
+2023-08-13,Keyboard,Electronics,14,337,East,4718
+2023-08-13,Headphones,Furniture,6,1336,South,8016
+2023-08-14,USB Cable,Accessories,11,884,South,9724
+2023-08-15,Headphones,Electronics,1,1246,East,1246
+2023-08-16,Desk Chair,Furniture,4,1366,East,5464
+2023-08-16,Desk Chair,Furniture,1,1366,North,1366
+2023-08-17,Desk Chair,Accessories,9,85,East,765
+2023-08-18,Laptop,Electronics,4,1190,East,4760
+2023-08-18,Keyboard,Accessories,4,1337,South,5348
+2023-08-18,Keyboard,Electronics,8,532,North,4256
+2023-08-19,Mouse,Furniture,12,1027,East,12324
+2023-08-19,Keyboard,Electronics,4,1064,North,4256
+2023-08-19,Desk Chair,Furniture,9,830,East,7470
+2023-08-20,Headphones,Furniture,5,1367,South,6835
+2023-08-20,Keyboard,Furniture,6,1240,East,7440
+2023-08-20,Mouse,Electronics,3,634,North,1902
+2023-08-20,Webcam,Accessories,14,151,South,2114
+2023-08-21,USB Cable,Electronics,14,1240,West,17360
+2023-08-21,Mouse,Electronics,5,1289,West,6445
+2023-08-21,Webcam,Furniture,8,1108,East,8864
+2023-08-23,Desk Chair,Accessories,14,991,East,13874
+2023-08-23,USB Cable,Electronics,12,1005,North,12060
+2023-08-23,Monitor,Accessories,11,1143,East,12573
+2023-08-24,Laptop,Electronics,11,838,East,9218
+2023-08-24,Laptop,Furniture,13,1352,West,17576
+2023-08-25,Desk Chair,Furniture,8,627,West,5016
+2023-08-26,Headphones,Accessories,5,1435,South,7175
+2023-08-26,Desk Chair,Accessories,10,993,North,9930
+2023-08-26,Mouse,Electronics,6,353,South,2118
+2023-08-29,Headphones,Furniture,6,122,North,732
+2023-08-29,Monitor,Accessories,8,192,West,1536
+2023-08-29,Desk Chair,Furniture,14,1233,South,17262
+2023-08-29,Laptop,Furniture,11,1399,West,15389
+2023-08-30,Keyboard,Accessories,2,509,East,1018
+2023-08-31,USB Cable,Electronics,2,1294,South,2588
+2023-09-03,Desk Chair,Accessories,11,1062,South,11682
+2023-09-03,Mouse,Accessories,7,753,West,5271
+2023-09-05,Webcam,Furniture,2,543,West,1086
+2023-09-07,Laptop,Electronics,6,940,North,5640
+2023-09-07,Mouse,Furniture,1,391,East,391
+2023-09-10,Monitor,Accessories,12,1206,West,14472
+2023-09-10,Headphones,Electronics,12,1438,West,17256
+2023-09-11,Desk Chair,Furniture,4,951,West,3804
+2023-09-12,Keyboard,Furniture,2,139,West,278
+2023-09-12,Headphones,Accessories,12,1008,North,12096
+2023-09-12,Monitor,Accessories,13,165,East,2145
+2023-09-12,Monitor,Electronics,4,722,East,2888
+2023-09-13,Mouse,Accessories,12,1269,North,15228
+2023-09-14,Desk Chair,Furniture,3,608,West,1824
+2023-09-14,Monitor,Electronics,8,361,North,2888
+2023-09-14,Mouse,Accessories,6,1487,North,8922
+2023-09-14,USB Cable,Accessories,11,508,East,5588
+2023-09-15,Webcam,Electronics,13,1492,North,19396
+2023-09-16,Webcam,Electronics,1,1341,East,1341
+2023-09-16,Laptop,Electronics,3,1440,East,4320
+2023-09-17,Mouse,Furniture,10,1024,East,10240
+2023-09-18,Headphones,Furniture,13,886,North,11518
+2023-09-18,Keyboard,Furniture,1,1037,South,1037
+2023-09-21,Monitor,Electronics,1,764,North,764
+2023-09-22,Mouse,Accessories,9,1017,West,9153
+2023-09-23,Mouse,Accessories,2,1275,South,2550
+2023-09-23,Monitor,Accessories,13,1162,West,15106
+2023-09-24,Laptop,Electronics,9,168,West,1512
+2023-09-24,Desk Chair,Accessories,6,669,South,4014
+2023-09-25,Laptop,Furniture,14,981,East,13734
+2023-09-26,Laptop,Electronics,6,502,West,3012
+2023-09-27,Laptop,Electronics,4,639,East,2556
+2023-09-28,Keyboard,Furniture,14,208,East,2912
+2023-09-30,Mouse,Furniture,6,92,West,552
+2023-09-30,Desk Chair,Furniture,9,908,East,8172
+2023-10-01,Headphones,Accessories,7,360,West,2520
+2023-10-02,Laptop,Furniture,7,833,West,5831
+2023-10-02,Monitor,Furniture,8,1473,North,11784
+2023-10-02,Webcam,Furniture,13,1312,West,17056
+2023-10-03,Desk Chair,Furniture,11,1029,South,11319
+2023-10-03,USB Cable,Electronics,6,1112,East,6672
+2023-10-04,USB Cable,Electronics,6,819,East,4914
+2023-10-05,Webcam,Furniture,9,1234,South,11106
+2023-10-05,Laptop,Accessories,5,624,East,3120
+2023-10-05,Desk Chair,Furniture,14,498,South,6972
+2023-10-09,Mouse,Electronics,9,740,North,6660
+2023-10-09,Keyboard,Electronics,14,1227,East,17178
+2023-10-09,Desk Chair,Electronics,14,1277,North,17878
+2023-10-09,USB Cable,Furniture,13,1324,South,17212
+2023-10-10,Laptop,Electronics,3,1083,West,3249
+2023-10-11,USB Cable,Accessories,2,682,South,1364
+2023-10-11,Webcam,Accessories,7,727,West,5089
+2023-10-12,Desk Chair,Electronics,12,1011,East,12132
+2023-10-14,USB Cable,Furniture,8,342,East,2736
+2023-10-16,Laptop,Accessories,11,509,South,5599
+2023-10-16,Laptop,Electronics,4,787,East,3148
+2023-10-18,Headphones,Accessories,13,385,West,5005
+2023-10-18,Monitor,Furniture,11,940,North,10340
+2023-10-18,Laptop,Accessories,13,1042,East,13546
+2023-10-19,Laptop,Furniture,9,1449,West,13041
+2023-10-20,Headphones,Electronics,3,1194,South,3582
+2023-10-21,Headphones,Furniture,13,433,South,5629
+2023-10-21,Monitor,Electronics,7,336,North,2352
+2023-10-22,Laptop,Electronics,10,257,South,2570
+2023-10-22,Headphones,Electronics,6,968,South,5808
+2023-10-22,Mouse,Accessories,1,941,South,941
+2023-10-23,Mouse,Accessories,8,179,West,1432
+2023-10-23,USB Cable,Electronics,5,1001,West,5005
+2023-10-23,Mouse,Furniture,5,347,South,1735
+2023-10-24,Keyboard,Accessories,7,293,East,2051
+2023-10-25,Keyboard,Furniture,3,205,South,615
+2023-10-25,USB Cable,Furniture,13,663,South,8619
+2023-10-26,Monitor,Accessories,3,718,North,2154
+2023-10-26,Webcam,Accessories,2,966,North,1932
+2023-10-27,Desk Chair,Accessories,12,311,West,3732
+2023-10-28,Monitor,Furniture,12,633,East,7596
+2023-10-29,USB Cable,Accessories,6,397,East,2382
+2023-10-30,Headphones,Furniture,10,562,East,5620
+2023-10-31,USB Cable,Accessories,4,70,South,280
+2023-11-01,Mouse,Electronics,10,538,West,5380
+2023-11-02,USB Cable,Furniture,3,1299,South,3897
+2023-11-05,Monitor,Furniture,1,1245,North,1245
+2023-11-06,Keyboard,Electronics,8,392,East,3136
+2023-11-07,Webcam,Electronics,7,1493,West,10451
+2023-11-08,Monitor,Electronics,13,340,South,4420
+2023-11-09,Webcam,Electronics,12,402,East,4824
+2023-11-09,Keyboard,Accessories,8,1240,South,9920
+2023-11-10,Keyboard,Accessories,12,1085,South,13020
+2023-11-11,Mouse,Accessories,10,1425,South,14250
+2023-11-12,Keyboard,Electronics,9,560,South,5040
+2023-11-13,Keyboard,Electronics,11,85,South,935
+2023-11-13,Desk Chair,Accessories,14,1319,East,18466
+2023-11-14,USB Cable,Furniture,3,842,South,2526
+2023-11-15,Headphones,Accessories,12,200,West,2400
+2023-11-17,USB Cable,Electronics,1,958,South,958
+2023-11-17,Monitor,Electronics,10,711,North,7110
+2023-11-17,Monitor,Electronics,9,1149,West,10341
+2023-11-20,Keyboard,Electronics,12,891,East,10692
+2023-11-20,Webcam,Electronics,3,247,North,741
+2023-11-21,Laptop,Accessories,8,586,West,4688
+2023-11-21,Mouse,Furniture,1,190,West,190
+2023-11-21,Keyboard,Accessories,3,390,West,1170
+2023-11-22,Desk Chair,Accessories,5,1409,West,7045
+2023-11-22,USB Cable,Accessories,3,668,East,2004
+2023-11-22,Mouse,Accessories,7,882,South,6174
+2023-11-23,Webcam,Furniture,6,1177,East,7062
+2023-11-23,Headphones,Furniture,6,319,East,1914
+2023-11-24,Keyboard,Furniture,6,785,South,4710
+2023-11-24,Keyboard,Electronics,2,1023,East,2046
+2023-11-24,Mouse,Accessories,6,377,East,2262
+2023-11-24,Keyboard,Furniture,2,424,West,848
+2023-11-25,Headphones,Electronics,12,1465,East,17580
+2023-11-25,Desk Chair,Electronics,3,340,East,1020
+2023-11-26,Keyboard,Furniture,3,286,North,858
+2023-11-27,USB Cable,Accessories,4,1303,West,5212
+2023-11-27,Headphones,Furniture,9,413,South,3717
+2023-11-27,Keyboard,Electronics,3,1289,South,3867
+2023-11-28,Laptop,Furniture,10,310,North,3100
+2023-11-28,Desk Chair,Electronics,5,1126,West,5630
+2023-11-28,USB Cable,Electronics,2,266,North,532
+2023-11-30,Headphones,Furniture,2,1407,South,2814
+2023-11-30,Keyboard,Accessories,4,1157,North,4628
+2023-12-03,Desk Chair,Furniture,5,893,East,4465
+2023-12-04,Webcam,Electronics,1,1138,East,1138
+2023-12-05,Webcam,Accessories,13,422,West,5486
+2023-12-06,USB Cable,Electronics,7,961,North,6727
+2023-12-06,Webcam,Accessories,2,1251,North,2502
+2023-12-08,USB Cable,Furniture,4,693,West,2772
+2023-12-08,Headphones,Furniture,2,1417,East,2834
+2023-12-09,Keyboard,Accessories,8,679,South,5432
+2023-12-10,Desk Chair,Electronics,7,519,East,3633
+2023-12-10,Monitor,Furniture,8,757,South,6056
+2023-12-10,Webcam,Electronics,6,209,East,1254
+2023-12-11,Keyboard,Electronics,13,1192,West,15496
+2023-12-12,Laptop,Electronics,14,539,West,7546
+2023-12-13,Laptop,Electronics,12,1013,East,12156
+2023-12-13,USB Cable,Electronics,4,280,East,1120
+2023-12-13,Mouse,Accessories,8,198,North,1584
+2023-12-13,Desk Chair,Electronics,8,1157,South,9256
+2023-12-14,Headphones,Furniture,2,1491,North,2982
+2023-12-15,Monitor,Accessories,10,836,South,8360
+2023-12-15,Desk Chair,Accessories,4,1018,North,4072
+2023-12-17,Keyboard,Electronics,12,825,West,9900
+2023-12-18,Laptop,Accessories,13,871,North,11323
+2023-12-18,USB Cable,Furniture,8,352,South,2816
+2023-12-18,Keyboard,Accessories,3,980,East,2940
+2023-12-18,Desk Chair,Accessories,10,1181,South,11810
+2023-12-18,Mouse,Electronics,3,1229,South,3687
+2023-12-19,Laptop,Accessories,11,1157,East,12727
+2023-12-19,USB Cable,Accessories,1,800,West,800
+2023-12-20,Mouse,Accessories,10,1468,West,14680
+2023-12-20,USB Cable,Furniture,10,430,East,4300
+2023-12-21,Mouse,Electronics,6,213,South,1278
+2023-12-21,Desk Chair,Furniture,8,579,East,4632
+2023-12-21,Laptop,Furniture,3,1218,North,3654
+2023-12-22,Keyboard,Furniture,4,496,South,1984
+2023-12-22,Headphones,Accessories,4,70,East,280
+2023-12-23,Headphones,Electronics,4,906,West,3624
+2023-12-26,Webcam,Accessories,4,61,North,244
+2023-12-26,Webcam,Electronics,6,1293,East,7758
+2023-12-26,Headphones,Furniture,2,439,North,878
+2023-12-27,Desk Chair,Accessories,2,736,North,1472
+2023-12-27,Mouse,Accessories,3,391,West,1173
+2023-12-28,Keyboard,Accessories,11,1424,East,15664
+2023-12-28,Mouse,Accessories,14,667,South,9338
+2023-12-29,Webcam,Accessories,1,385,East,385
