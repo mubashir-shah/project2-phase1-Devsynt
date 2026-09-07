@@ -1,0 +1,26 @@
+SKU,Product,Category,Warehouse,StockLevel,ReorderLevel,UnitsIn,UnitsOut,UnitCost,Supplier,StockDate
+SKU001,Laptop,Electronics,Warehouse A,120,30,150,30,850,TechSupply,2026-01-05
+SKU002,Monitor,Electronics,Warehouse B,85,25,100,15,220,DisplayCo,2026-01-08
+SKU003,Keyboard,Accessories,Warehouse A,200,50,230,30,25,InputTech,2026-01-12
+SKU004,Mouse,Accessories,Warehouse C,175,40,200,25,12,InputTech,2026-01-15
+SKU005,Office Chair,Furniture,Warehouse B,60,20,80,20,140,OfficeMart,2026-01-18
+SKU006,Desk,Furniture,Warehouse A,45,15,60,15,210,OfficeMart,2026-01-21
+SKU007,Webcam,Electronics,Warehouse C,95,25,120,25,55,TechSupply,2026-01-25
+SKU008,USB Cable,Accessories,Warehouse B,300,80,350,50,6,CableWorld,2026-01-28
+SKU009,Laptop Stand,Accessories,Warehouse A,110,30,130,20,35,OfficeMart,2026-02-02
+SKU010,Headphones,Electronics,Warehouse C,140,35,170,30,45,AudioTech,2026-02-05
+SKU011,Laptop,Electronics,Warehouse B,90,30,110,20,850,TechSupply,2026-02-09
+SKU012,Monitor,Electronics,Warehouse A,70,25,90,20,220,DisplayCo,2026-02-12
+SKU013,Keyboard,Accessories,Warehouse C,180,50,210,30,25,InputTech,2026-02-16
+SKU014,Mouse,Accessories,Warehouse A,220,50,250,30,12,InputTech,2026-02-19
+SKU015,Office Chair,Furniture,Warehouse C,55,20,75,20,140,OfficeMart,2026-02-23
+SKU016,Desk,Furniture,Warehouse B,40,15,55,15,210,OfficeMart,2026-02-26
+SKU017,Webcam,Electronics,Warehouse A,100,25,125,25,55,TechSupply,2026-03-02
+SKU018,USB Cable,Accessories,Warehouse C,280,80,320,40,6,CableWorld,2026-03-05
+SKU019,Laptop Stand,Accessories,Warehouse B,95,30,115,20,35,OfficeMart,2026-03-09
+SKU020,Headphones,Electronics,Warehouse A,155,40,180,25,45,AudioTech,2026-03-12
+SKU021,Laptop,Electronics,Warehouse C,105,30,135,30,850,TechSupply,2026-03-16
+SKU022,Monitor,Electronics,Warehouse B,75,25,95,20,220,DisplayCo,2026-03-19
+SKU023,Keyboard,Accessories,Warehouse A,210,50,240,30,25,InputTech,2026-03-23
+SKU024,Mouse,Accessories,Warehouse C,190,50,220,30,12,InputTech,2026-03-26
+SKU025,Office Chair,Furniture,Warehouse A,65,20,85,20,140,OfficeMart,2026-03-30

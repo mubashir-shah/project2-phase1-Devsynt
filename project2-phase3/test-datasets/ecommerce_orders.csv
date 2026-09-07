@@ -1,0 +1,31 @@
+OrderID,OrderDate,Customer,Product,Category,Quantity,UnitPrice,Discount,TotalAmount,PaymentMethod,Region
+ORD001,2026-01-05,Ali,Laptop,Electronics,1,1200,50,1150,Card,North
+ORD002,2026-01-07,Hassan,Headphones,Electronics,2,80,10,150,Cash,South
+ORD003,2026-01-10,Sara,Office Chair,Furniture,1,250,20,230,Card,East
+ORD004,2026-01-12,Ahmed,Keyboard,Accessories,3,45,5,130,Online,West
+ORD005,2026-01-15,Ayesha,Monitor,Electronics,2,300,30,570,Card,North
+ORD006,2026-01-18,Omar,Mouse,Accessories,4,25,5,95,Cash,South
+ORD007,2026-01-20,Fatima,Desk,Furniture,1,400,40,360,Card,East
+ORD008,2026-01-23,Bilal,Webcam,Electronics,2,90,10,170,Online,West
+ORD009,2026-01-26,Zainab,USB Cable,Accessories,5,15,5,70,Cash,North
+ORD010,2026-01-29,Usman,Laptop,Electronics,1,1250,100,1150,Card,South
+ORD011,2026-02-02,Hamza,Headphones,Electronics,3,85,15,240,Online,East
+ORD012,2026-02-05,Maria,Office Chair,Furniture,2,260,30,490,Card,West
+ORD013,2026-02-08,Danish,Keyboard,Accessories,2,50,5,95,Cash,North
+ORD014,2026-02-11,Hina,Monitor,Electronics,1,320,20,300,Card,South
+ORD015,2026-02-14,Saad,Mouse,Accessories,6,22,7,125,Online,East
+ORD016,2026-02-17,Laiba,Desk,Furniture,1,420,50,370,Card,West
+ORD017,2026-02-20,Rehan,Webcam,Electronics,3,95,15,270,Cash,North
+ORD018,2026-02-23,Maham,USB Cable,Accessories,8,14,10,102,Online,South
+ORD019,2026-02-26,Farhan,Laptop,Electronics,2,1180,80,2280,Card,East
+ORD020,2026-02-28,Komal,Headphones,Electronics,4,75,20,280,Cash,West
+ORD021,2026-03-03,Ali,Monitor,Electronics,2,310,25,595,Card,North
+ORD022,2026-03-06,Hassan,Keyboard,Accessories,5,48,8,232,Online,South
+ORD023,2026-03-09,Sara,Office Chair,Furniture,1,270,20,250,Card,East
+ORD024,2026-03-12,Ahmed,Mouse,Accessories,7,24,10,158,Cash,West
+ORD025,2026-03-15,Ayesha,Desk,Furniture,2,390,60,720,Card,North
+ORD026,2026-03-18,Omar,Webcam,Electronics,2,100,15,185,Online,South
+ORD027,2026-03-21,Fatima,USB Cable,Accessories,10,12,10,110,Cash,East
+ORD028,2026-03-24,Bilal,Laptop,Electronics,1,1220,70,1150,Card,West
+ORD029,2026-03-27,Zainab,Headphones,Electronics,3,82,12,234,Online,North
+ORD030,2026-03-30,Usman,Monitor,Electronics,1,305,15,290,Cash,South

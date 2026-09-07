@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a111d">
+    <title>Restaurant Sales · Analytics Studio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        :root {
+            --bg: #0a111d;
+            --panel: #101a2a;
+            --panel-2: #0d1725;
+            --panel-3: #142238;
+            --border: #24344c;
+            --border-soft: rgba(160, 181, 208, .10);
+            --text: #f5f7fb;
+            --muted: #8c9bb0;
+            --subtle: #5f7087;
+            --blue: #4f7cff;
+            --blue-soft: rgba(79,124,255,.12);
+            --teal: #28c1ae;
+            --amber: #e9ae55;
+            --rose: #e5758a;
+            --shadow: 0 20px 50px rgba(0,0,0,.18);
+            --radius: 20px;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 82% 4%, rgba(79,124,255,.10), transparent 25%),
+                radial-gradient(circle at 5% 42%, rgba(40,193,174,.045), transparent 24%);
+            z-index: -2;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .028;
+            background-image:
+                linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
+            z-index: -1;
+        }
+        .page { width: min(1480px, calc(100% - 56px)); margin: 0 auto; padding: 22px 0 52px; }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 11px 12px 11px 14px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            background: rgba(12,20,33,.76);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 28px rgba(0,0,0,.10);
+            animation: fadeDown .55s ease both;
+        }
+        .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
+        .brand-mark {
+            width: 34px; height: 34px; display: grid; place-items: center;
+            border-radius: 10px;
+            background: #1a2941;
+            border: 1px solid #2b4264;
+            color: #a9c0ff;
+            font-weight: 850;
+            font-size: 14px;
+        }
+        .brand-name { font-size: 12px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+        .brand-meta { color: var(--subtle); font-size: 10px; margin-top: 1px; }
+        .topbar-right { display: flex; align-items: center; gap: 8px; }
+        .pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid #22324a; border-radius: 999px; background: #0d1725; color: #aebbd0; font-size: 10px; font-weight: 750; letter-spacing: .04em; }
+        .domain-pill { max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #a9bfff; border-color: rgba(79,124,255,.22); background: rgba(79,124,255,.06); }
+        .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px rgba(40,193,174,.10); }
+
+        .hero { display: grid; grid-template-columns: minmax(0,1fr) 300px; gap: 28px; align-items: end; padding: 0 3px; margin-bottom: 30px; animation: fadeUp .65s .05s ease both; }
+        .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 11px; color: #8797ad; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; }
+        .eyebrow-line { width: 31px; height: 2px; background: var(--blue); opacity: .85; border-radius: 2px; }
+        h1 { margin: 0; max-width: 920px; font-size: clamp(38px, 5vw, 64px); line-height: 1.02; letter-spacing: -.06em; font-weight: 830; }
+        .hero-title-accent { color: #b6c7e5; }
+        .subtitle { max-width: 790px; margin: 13px 0 0; color: #7f8ea4; font-size: 13px; }
+        .hero-side { display: grid; gap: 9px; }
+        .hero-stat { padding: 14px 16px; border: 1px solid var(--border-soft); border-radius: 16px; background: linear-gradient(145deg, rgba(18,30,48,.94), rgba(13,22,36,.94)); }
+        .hero-stat-label { color: var(--subtle); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+        .hero-stat-value { margin-top: 3px; color: #e8eef8; font-size: 17px; font-weight: 780; overflow-wrap: anywhere; }
+
+        .section-title { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin: 28px 2px 12px; }
+        .section-title h2 { margin: 0; color: #becadd; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
+        .section-note { color: #56667e; font-size: 10px; }
+
+        .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 13px; }
+        .kpi {
+            --accent: var(--blue);
+            position: relative;
+            min-height: 150px;
+            overflow: hidden;
+            padding: 19px 20px;
+            border: 1px solid var(--border);
+            border-radius: 19px;
+            background: linear-gradient(145deg, rgba(17,28,45,.98), rgba(12,21,34,.98));
+            box-shadow: 0 14px 34px rgba(0,0,0,.14);
+            transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+            animation: fadeUp .55s ease both;
+        }
+        .kpi:nth-child(2) { animation-delay: .05s; }
+        .kpi:nth-child(3) { animation-delay: .10s; }
+        .kpi:nth-child(4) { animation-delay: .15s; }
+        .kpi::before { content: ""; position: absolute; left: 20px; right: 20px; top: 0; height: 2px; border-radius: 0 0 2px 2px; background: var(--accent); opacity: .86; }
+        .kpi::after { content: ""; position: absolute; right: -52px; bottom: -60px; width: 126px; height: 126px; border-radius: 50%; border: 1px solid rgba(255,255,255,.035); box-shadow: 0 0 0 16px rgba(255,255,255,.010), 0 0 0 33px rgba(255,255,255,.006); }
+        .kpi:hover { transform: translateY(-4px); border-color: #344865; box-shadow: 0 22px 42px rgba(0,0,0,.20); }
+        .kpi-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 27px; }
+        .kpi-label { color: #8f9db2; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+        .kpi-icon { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 9px; border: 1px solid rgba(255,255,255,.07); background: rgba(255,255,255,.025); color: var(--accent); font-size: 11px; font-weight: 800; }
+        .kpi-value { position: relative; z-index: 1; color: #f1f5fb; font-size: clamp(28px,3vw,38px); font-weight: 820; letter-spacing: -.045em; line-height: 1; overflow-wrap: anywhere; }
+
+        .section { margin-top: 18px; }
+        .card {
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: linear-gradient(145deg, rgba(16,26,42,.98), rgba(12,20,33,.98));
+            box-shadow: var(--shadow);
+            animation: fadeUp .62s .16s ease both;
+        }
+        .card-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 23px 11px; }
+        .card-title { display: flex; align-items: center; gap: 9px; color: #e6edf7; font-size: 15px; font-weight: 780; letter-spacing: -.01em; }
+        .card-title::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 5px rgba(79,124,255,.06); }
+        .card-subtitle { margin-top: 4px; color: #6e7e95; font-size: 10px; }
+        .trend-meta { display: inline-flex; align-items: center; gap: 8px; color: #708097; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+        .legend-line { width: 19px; height: 2px; background: var(--blue); border-radius: 2px; }
+        .chart-wrap { height: 365px; padding: 8px 19px 21px; }
+        .chart-wrap canvas { width: 100% !important; height: 100% !important; }
+
+        .two-column { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+        .dimension-card { min-height: 395px; }
+        .dimension-title { display: flex; align-items: center; gap: 9px; }
+        .dimension-index { display: inline-grid; place-items: center; width: 25px; height: 25px; border-radius: 8px; color: #a8bbf3; background: rgba(79,124,255,.06); border: 1px solid rgba(79,124,255,.18); font-size: 9px; font-weight: 850; }
+
+        .insights { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; padding: 0 19px 21px; }
+        .insight { position: relative; min-height: 91px; overflow: hidden; padding: 16px 18px 15px 20px; border: 1px solid #223149; border-radius: 15px; background: #0d1725; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+        .insight::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--blue); }
+        .insight:nth-child(2)::before { background: var(--teal); }
+        .insight:nth-child(3)::before { background: var(--amber); }
+        .insight:nth-child(4)::before { background: var(--rose); }
+        .insight:hover { transform: translateY(-2px); border-color: #31435f; background: #101b2b; }
+        .insight-title { color: #c1cede; font-size: 9px; font-weight: 850; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 7px; }
+        .insight-text { color: #8e9caf; font-size: 11px; line-height: 1.66; }
+
+        .overview-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 9px; padding: 0 19px 21px; }
+        .overview-item { min-height: 82px; padding: 14px 15px; border: 1px solid #223149; border-radius: 14px; background: #0d1725; }
+        .overview-label { margin-bottom: 8px; color: #61718a; font-size: 8px; font-weight: 850; text-transform: uppercase; letter-spacing: .11em; }
+        .overview-value { color: #d3deed; font-size: 11px; font-weight: 700; line-height: 1.5; overflow-wrap: anywhere; }
+
+        .empty { min-height: 235px; display: grid; place-items: center; padding: 30px; text-align: center; color: #738299; font-size: 11px; }
+        .footer { display: flex; justify-content: space-between; gap: 18px; padding: 19px 2px 0; color: #53637a; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(13px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 1100px) {
+            .kpi-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+            .overview-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+            .hero { grid-template-columns: 1fr; }
+            .hero-side { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        }
+        @media (max-width: 780px) {
+            .page { width: min(100% - 26px, 1480px); padding-top: 14px; }
+            .topbar-right { display: none; }
+            .two-column, .insights { grid-template-columns: 1fr; }
+            .overview-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+            .hero-side { grid-template-columns: 1fr; }
+            h1 { font-size: clamp(34px,10vw,48px); }
+        }
+        @media (max-width: 520px) {
+            .kpi-grid, .overview-grid { grid-template-columns: 1fr; }
+            .chart-wrap { height: 295px; padding: 7px 9px 17px; }
+            .card-head { padding: 17px 17px 10px; }
+            .insights, .overview-grid { padding-left: 13px; padding-right: 13px; }
+            .footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="topbar">
+        <div class="brand">
+            <div class="brand-mark">A</div>
+            <div>
+                <div class="brand-name">Analytics Studio</div>
+                <div class="brand-meta">Dynamic multi-agent business intelligence</div>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <div class="pill domain-pill" title="Restaurant Sales">Restaurant Sales</div>
+            <div class="pill"><span class="pill-dot"></span> Analysis ready</div>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> BUSINESS INTELLIGENCE / DATASET VIEW</div>
+            <h1>Restaurant Sales <span class="hero-title-accent">Analytics</span></h1>
+            <p class="subtitle">A dynamic view of restaurant sales performance, built from the detected dataset structure and business measures.</p>
+        </div>
+        <div class="hero-side">
+            <div class="hero-stat">
+                <div class="hero-stat-label">Primary measure</div>
+                <div class="hero-stat-value">Totalamount</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-label">Dataset size</div>
+                <div class="hero-stat-value">30 records</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2>Executive snapshot</h2>
+        <div class="section-note">Key measures selected automatically for this domain</div>
+    </div>
+    <section class="kpi-grid">
+        <div class="kpi" style="--accent:#4f7cff">
+                    <div class="kpi-head">
+                        <div class="kpi-label">Totalamount</div>
+                        <div class="kpi-icon">↗</div>
+                    </div>
+                    <div class="kpi-value">48,960</div>
+                </div>
+<div class="kpi" style="--accent:#28c1ae">
+                    <div class="kpi-head">
+                        <div class="kpi-label">Total Quantity</div>
+                        <div class="kpi-icon">•</div>
+                    </div>
+                    <div class="kpi-value">91</div>
+                </div>
+<div class="kpi" style="--accent:#e9ae55">
+                    <div class="kpi-head">
+                        <div class="kpi-label">Avg Unitprice</div>
+                        <div class="kpi-icon">•</div>
+                    </div>
+                    <div class="kpi-value">659</div>
+                </div>
+<div class="kpi" style="--accent:#e5758a">
+                    <div class="kpi-head">
+                        <div class="kpi-label">Top Item</div>
+                        <div class="kpi-icon">★</div>
+                    </div>
+                    <div class="kpi-value">Pizza</div>
+                </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Trend & performance</h2>
+        <div class="section-note">Time-aware performance view</div>
+    </div>
+    <section class="section">
+        <div class="card trend-card">
+            <div class="card-head">
+                <div>
+                    <div class="card-title">Totalamount trend</div>
+                    <div class="card-subtitle">Monthly movement of the selected primary measure</div>
+                </div>
+                <div class="trend-meta"><span class="legend-line"></span>Totalamount</div>
+            </div>
+            <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Business breakdowns</h2>
+        <div class="section-note">Top contributors across detected dimensions</div>
+    </div>
+    <section class="section">
+        <div class="two-column">
+            <div class="card dimension-card">
+                    <div class="card-head">
+                        <div>
+                            <div class="card-title"><span class="dimension-index">01</span>Totalamount by Item</div>
+                            <div class="card-subtitle">Top Item contributors · ranked by the primary measure</div>
+                        </div>
+                    </div>
+                    <div class="chart-wrap"><canvas id="dimensionChart0"></canvas></div>
+                </div>
+<div class="card dimension-card">
+                    <div class="card-head">
+                        <div>
+                            <div class="card-title"><span class="dimension-index">02</span>Totalamount by Category</div>
+                            <div class="card-subtitle">Top Category contributors · ranked by the primary measure</div>
+                        </div>
+                    </div>
+                    <div class="chart-wrap"><canvas id="dimensionChart1"></canvas></div>
+                </div>
+<div class="card dimension-card">
+                    <div class="card-head">
+                        <div>
+                            <div class="card-title"><span class="dimension-index">03</span>Totalamount by Server</div>
+                            <div class="card-subtitle">Top Server contributors · ranked by the primary measure</div>
+                        </div>
+                    </div>
+                    <div class="chart-wrap"><canvas id="dimensionChart2"></canvas></div>
+                </div>
+<div class="card dimension-card">
+                    <div class="card-head">
+                        <div>
+                            <div class="card-title"><span class="dimension-index">04</span>Totalamount by Paymentmethod</div>
+                            <div class="card-subtitle">Top Paymentmethod contributors · ranked by the primary measure</div>
+                        </div>
+                    </div>
+                    <div class="chart-wrap"><canvas id="dimensionChart3"></canvas></div>
+                </div>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Analyst notes</h2>
+        <div class="section-note">Automatically derived observations</div>
+    </div>
+    <section class="section">
+        <div class="card">
+            <div class="card-head">
+                <div>
+                    <div class="card-title">Key insights</div>
+                    <div class="card-subtitle">The strongest signals surfaced from the current analysis</div>
+                </div>
+            </div>
+            <div class="insights"><div class="insight">
+                    <div class="insight-title">Primary Metric</div>
+                    <div class="insight-text">Totalamount is 48,960 across 30 records.</div>
+                </div>
+<div class="insight">
+                    <div class="insight-title">Top Item</div>
+                    <div class="insight-text">Pizza leads Item with 12,000 in Totalamount.</div>
+                </div>
+<div class="insight">
+                    <div class="insight-title">Top Category</div>
+                    <div class="insight-text">Main Course leads Category with 35,800 in Totalamount.</div>
+                </div>
+<div class="insight">
+                    <div class="insight-title">Top Server</div>
+                    <div class="insight-text">Ali leads Server with 15,050 in Totalamount.</div>
+                </div></div>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Dataset profile</h2>
+        <div class="section-note">Structure detected by the production pipeline</div>
+    </div>
+    <section class="section">
+        <div class="card">
+            <div class="card-head">
+                <div>
+                    <div class="card-title">Data overview</div>
+                    <div class="card-subtitle">Columns and fields used to assemble the dashboard</div>
+                </div>
+            </div>
+            <div class="overview-grid"><div class="overview-item">
+                    <div class="overview-label">Records</div>
+                    <div class="overview-value">30</div>
+                </div>
+<div class="overview-item">
+                    <div class="overview-label">Columns</div>
+                    <div class="overview-value">10</div>
+                </div>
+<div class="overview-item">
+                    <div class="overview-label">Metrics</div>
+                    <div class="overview-value">Totalamount, Quantity, Unitprice</div>
+                </div>
+<div class="overview-item">
+                    <div class="overview-label">Dimensions</div>
+                    <div class="overview-value">Item, Category, Server, Paymentmethod</div>
+                </div>
+<div class="overview-item">
+                    <div class="overview-label">Time Field</div>
+                    <div class="overview-value">Orderdate, Tablenumber, Quantity, Unitprice, Totalamount</div>
+                </div></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span>Dynamic Multi-Agent Analytics Pipeline</span>
+        <span>Domain → Clean → Analyze → Dashboard</span>
+    </footer>
+</div>
+
+<script>
+    Chart.defaults.font.family = 'Inter, ui-sans-serif, system-ui, sans-serif';
+    Chart.defaults.color = '#738198';
+
+    const gridColor = 'rgba(134,151,178,.085)';
+    const blue = '#4f7cff';
+    const teal = '#28c1ae';
+    const amber = '#e9ae55';
+    const rose = '#e5758a';
+    const palette = [blue, teal, amber, rose, '#8c86ff', '#4aa5f5'];
+
+    function chartTooltip() {
+        return {
+            enabled: true,
+            backgroundColor: '#0a111d',
+            borderColor: '#2c3d57',
+            borderWidth: 1,
+            titleColor: '#f3f6fb',
+            bodyColor: '#b3c0d2',
+            titleFont: { size: 11, weight: '700' },
+            bodyFont: { size: 11 },
+            padding: 11,
+            displayColors: false,
+            cornerRadius: 9,
+            caretPadding: 8
+        };
+    }
+
+    function shortenLabel(value, max) {
+        const text = String(value);
+        return text.length > max ? text.slice(0, max - 1) + '…' : text;
+    }
+
+    function createLineChart(elementId, labels, values) {
+        const canvas = document.getElementById(elementId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const fill = ctx.createLinearGradient(0, 0, 0, 330);
+        fill.addColorStop(0, 'rgba(79,124,255,.23)');
+        fill.addColorStop(.58, 'rgba(79,124,255,.075)');
+        fill.addColorStop(1, 'rgba(79,124,255,0)');
+        new Chart(canvas, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    borderColor: blue,
+                    backgroundColor: fill,
+                    borderWidth: 2.4,
+                    pointRadius: 3,
+                    pointHoverRadius: 6,
+                    pointBorderWidth: 2,
+                    pointBorderColor: '#0d1725',
+                    pointBackgroundColor: blue,
+                    tension: .34,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                animation: { duration: 1050, easing: 'easeOutQuart' },
+                plugins: { legend: { display: false }, tooltip: chartTooltip() },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        border: { display: false },
+                        ticks: { color: '#607089', font: { size: 10 } }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: gridColor },
+                        border: { display: false },
+                        ticks: {
+                            color: '#607089',
+                            font: { size: 10 },
+                            padding: 7,
+                            callback: function(value) { return Number(value).toLocaleString(); }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function createBarChart(elementId, labels, values, color) {
+        const canvas = document.getElementById(elementId);
+        if (!canvas) return;
+        new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels: labels.map(function(value) { return shortenLabel(value, 15); }),
+                datasets: [{
+                    data: values,
+                    backgroundColor: color,
+                    borderColor: color,
+                    borderWidth: 0,
+                    borderRadius: 6,
+                    borderSkipped: false,
+                    maxBarThickness: 40,
+                    hoverBackgroundColor: color
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: 900, easing: 'easeOutQuart' },
+                plugins: { legend: { display: false }, tooltip: chartTooltip() },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        border: { display: false },
+                        ticks: { color: '#607089', font: { size: 10 }, maxRotation: 24, minRotation: 0, autoSkip: false }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: gridColor },
+                        border: { display: false },
+                        ticks: {
+                            color: '#607089',
+                            font: { size: 10 },
+                            padding: 7,
+                            callback: function(value) { return Number(value).toLocaleString(); }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    const trendLabels = ["2026-01", "2026-02", "2026-03"];
+    const trendValues = [15170.0, 14990.0, 18800.0];
+    createLineChart('trendChart', trendLabels, trendValues);
+
+    const dimensionCharts = [{"dimension": "Item", "title": "Totalamount by Item", "labels": ["Pizza", "Burger", "Chicken Biryani", "Pasta", "Fries", "Coffee", "Cola"], "values": [12000.0, 9350.0, 7800.0, 6650.0, 5600.0, 4500.0, 3060.0]}, {"dimension": "Category", "title": "Totalamount by Category", "labels": ["Main Course", "Beverage", "Side"], "values": [35800.0, 7560.0, 5600.0]}, {"dimension": "Server", "title": "Totalamount by Server", "labels": ["Ali", "Ahmed", "Sara", "Ayesha"], "values": [15050.0, 14250.0, 9950.0, 9710.0]}, {"dimension": "PaymentMethod", "title": "Totalamount by Paymentmethod", "labels": ["Card", "Cash"], "values": [28340.0, 20620.0]}];
+    dimensionCharts.forEach(function(chart, index) {
+        createBarChart('dimensionChart' + index, chart.labels, chart.values, palette[index % palette.length]);
+    });
+</script>
+</body>
+</html>

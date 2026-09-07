@@ -1,0 +1,31 @@
+OrderID,OrderDate,TableNumber,Server,Item,Category,Quantity,UnitPrice,TotalAmount,PaymentMethod
+R001,2026-01-05,5,Ali,Burger,Main Course,2,850,1700,Cash
+R002,2026-01-05,8,Sara,Pizza,Main Course,1,1200,1200,Card
+R003,2026-01-06,3,Ahmed,Pasta,Main Course,2,950,1900,Card
+R004,2026-01-06,10,Ayesha,Cola,Beverage,4,180,720,Cash
+R005,2026-01-07,2,Ali,Chicken Biryani,Main Course,3,650,1950,Card
+R006,2026-01-07,7,Sara,Coffee,Beverage,5,250,1250,Cash
+R007,2026-01-08,4,Ahmed,Fries,Side,4,350,1400,Card
+R008,2026-01-08,9,Ayesha,Burger,Main Course,2,850,1700,Card
+R009,2026-01-09,1,Ali,Pizza,Main Course,2,1200,2400,Cash
+R010,2026-01-09,6,Sara,Pasta,Main Course,1,950,950,Card
+R011,2026-02-02,5,Ahmed,Chicken Biryani,Main Course,2,650,1300,Cash
+R012,2026-02-02,8,Ayesha,Cola,Beverage,3,180,540,Card
+R013,2026-02-03,3,Ali,Coffee,Beverage,4,250,1000,Cash
+R014,2026-02-03,10,Sara,Fries,Side,3,350,1050,Card
+R015,2026-02-04,2,Ahmed,Burger,Main Course,3,850,2550,Card
+R016,2026-02-04,7,Ayesha,Pizza,Main Course,2,1200,2400,Cash
+R017,2026-02-05,4,Ali,Pasta,Main Course,2,950,1900,Card
+R018,2026-02-05,9,Sara,Cola,Beverage,5,180,900,Cash
+R019,2026-02-06,1,Ahmed,Chicken Biryani,Main Course,4,650,2600,Card
+R020,2026-02-06,6,Ayesha,Coffee,Beverage,3,250,750,Cash
+R021,2026-03-03,5,Ali,Fries,Side,5,350,1750,Card
+R022,2026-03-03,8,Sara,Burger,Main Course,2,850,1700,Cash
+R023,2026-03-04,3,Ahmed,Pizza,Main Course,3,1200,3600,Card
+R024,2026-03-04,10,Ayesha,Pasta,Main Course,2,950,1900,Cash
+R025,2026-03-05,2,Ali,Chicken Biryani,Main Course,3,650,1950,Card
+R026,2026-03-05,7,Sara,Coffee,Beverage,6,250,1500,Cash
+R027,2026-03-06,4,Ahmed,Cola,Beverage,5,180,900,Card
+R028,2026-03-06,9,Ayesha,Burger,Main Course,2,850,1700,Cash
+R029,2026-03-07,1,Ali,Pizza,Main Course,2,1200,2400,Card
+R030,2026-03-07,6,Sara,Fries,Side,4,350,1400,Cash
